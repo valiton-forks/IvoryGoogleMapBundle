@@ -136,6 +136,7 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->arrayNode('api')->addDefaultsIfNotSet()
                     ->children()
+                        ->scalarNode('key')->end()
                         ->scalarNode('helper_class')->end()
                         ->arrayNode('libraries')
                             ->prototype('scalar')->end()

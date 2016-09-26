@@ -151,6 +151,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadApi(array $config, ContainerBuilder $container)
     {
+        $container->setParameter('ivory_google_map.api_key', $config['api']['key']);
         if (isset($config['api']['helper_class'])) {
             $container
                 ->getDefinition('ivory_google_map.helper.api')

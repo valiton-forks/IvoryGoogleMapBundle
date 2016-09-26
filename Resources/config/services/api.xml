@@ -10,7 +10,8 @@
 
     <services>
         <!-- Map API service -->
-        <service id="ivory_google_map.helper.api" class="%ivory_google_map.helper.api.class%" public="false" />
+        <service id="ivory_google_map.helper.api" class="%ivory_google_map.helper.api.class%" public="false" >
             <argument>%ivory_google_map.api_key%</argument>
+        </service>
     </services>
 </container>

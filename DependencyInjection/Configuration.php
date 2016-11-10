@@ -1033,6 +1033,7 @@ class Configuration implements ConfigurationInterface
                                 ->scalarNode('class')->end()
                                 ->scalarNode('api_key')->end()
                                 ->scalarNode('locale')->end()
+                                ->scalarNode('https')->defaultTrue()->end()
                             ->end()
                         ->end()
                     ->end()

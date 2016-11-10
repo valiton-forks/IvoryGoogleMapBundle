@@ -1538,12 +1538,22 @@ class IvoryGoogleMapExtension extends Extension
             $providerDefinition->setClass($config['geocoder']['provider']['class']);
         }
 
-        if (isset($config['geocoder']['provider']['api_key'])) {
-            $providerDefinition->addArgument($config['geocoder']['provider']['api_key']);
-        }
-
         if (isset($config['geocoder']['provider']['locale'])) {
             $providerDefinition->addArgument($config['geocoder']['provider']['locale']);
+        } else {
+            $providerDefinition->addArgument(null);
+        }
+
+        if (isset($config['geocoder']['provider']['https'])) {
+            $providerDefinition->addArgument($config['geocoder']['provider']['https']);
+        } else {
+            $providerDefinition->addArgument(false);
+        }
+
+        if (isset($config['geocoder']['provider']['api_key'])) {
+            $providerDefinition->addArgument($config['geocoder']['provider']['api_key']);
+        } else {
+            $providerDefinition->addArgument(null);
         }
     }
 
